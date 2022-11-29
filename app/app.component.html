@@ -1,0 +1,8 @@
+<div style="height: 200px; width=200px; background-color: yellow" class="container">
+  <div 
+    style="height: 20px; width: 20px; background-color: red; z-index: 10" 
+    cdkDrag 
+    cdkDragBoundary=".container"
+    (cdkDragEnded)="onDragEnded($event)">
+  </div>
+</div>
