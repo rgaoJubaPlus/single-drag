@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CdkDragEnd } from "@angular/cdk/drag-drop";
+import { CdkDragEnd, CdkDragDrop } from "@angular/cdk/drag-drop";
 
 @Component({
   selector: 'my-app',
