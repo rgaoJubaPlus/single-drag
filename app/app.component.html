@@ -12,14 +12,31 @@
 </div> -->
 
 
-<div style="width: 100%;background-color: yellow"> background
-  <div 
-    style="height: 100px; width: 100px; background-color: red; z-index: 10" 
-    cdkDrag 
-    cdkDragBoundary=".container"
-    (cdkDragEnded)="onDragEnded($event)"> Reels
+<div style="width: 100%;background-color: yellow"> 
+  
+
+  <div style="width: 50%; float: left;">
+    <textarea ng-model="myTextarea"
+      style="height: 50px; width: 200px; background-color: red; z-index: 10" 
+      cdkDrag 
+      cdkDragBoundary=".container"
+      (cdkDragEnded)="onDragEnded('reel1', $event)"> Reels 1</textarea>
+
+    <textarea ng-model="myTextarea"
+      style="height: 50px; width: 200px; background-color: red; z-index: 10" 
+      cdkDrag 
+      cdkDragBoundary=".container"
+      (cdkDragEnded)="onDragEnded('reel2', $event)"> Reels 2</textarea>
+
+    <textarea ng-model="myTextarea"
+      style="height: 50px; width: 200px; background-color: red; z-index: 10" 
+      cdkDrag 
+      cdkDragBoundary=".container"
+      (cdkDragEnded)="onDragEnded('reel3', $event)"> Reels 3</textarea>
   </div>
   <div style="margin-left: 50%; height: 300px; background: blue;"> 
     Video
   </div>
+
+  <button (click) = "saveThePlan()"> save </button>
 </div>
