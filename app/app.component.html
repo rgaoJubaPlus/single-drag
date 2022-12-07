@@ -15,30 +15,35 @@
 <div style="width: 100%;background-color: yellow"> 
   
 
-  <div style="width: 50%; float: left;">
-    <textarea ng-model="myTextarea"
-      style="height: 50px; width: 200px; background-color: white; z-index: 10" 
+  <!-- <div style="width: 50%; float: left; z-index: 1"> -->
+    
+  <!-- </div> -->
+
+  <div class="video-container">
+
+    
+    <video autoplay muted loop>
+        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+    </video>
+    <div class="caption">
+      <textarea ng-model="myTextarea"
+      style="height: 50px; width: width: 100%;;  background-color: transparent; border: 0 none;z-index: 1" 
       cdkDrag 
       cdkDragBoundary=".container"
-      (cdkDragEnded)="onDragEnded('reel1', $event)"> Reels 1</textarea>
+      (cdkDragEnded)="onDragEnded('reel1', $event)"> 😋 Get Emoji — All Emojis to ✂️ Copy and 📋 Paste 👌</textarea>
 
     <textarea ng-model="myTextarea"
-      style="height: 50px; width: 200px; background-color: red; z-index: 10" 
+      style="height: 50px; width: 200px; background-color: red; z-index: 1" 
       cdkDrag 
       cdkDragBoundary=".container"
       (cdkDragEnded)="onDragEnded('reel2', $event)"> Reels 2</textarea>
 
     <textarea ng-model="myTextarea"
-      style="height: 50px; width: 200px; background-color: red; z-index: 10" 
+      style="height: 50px; width: 200px; background-color: red; z-index: 1" 
       cdkDrag 
       cdkDragBoundary=".container"
       (cdkDragEnded)="onDragEnded('reel3', $event)"> Reels 3</textarea>
-  </div>
-  <div style="margin-left: 50%; height: 300px; background: blue;"> 
-    <video autoplay muted loop id="myVideo">
-      <source src="path_to_video" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
+    </div>
   </div>
 
   <button (click) = "saveThePlan()"> save </button>
