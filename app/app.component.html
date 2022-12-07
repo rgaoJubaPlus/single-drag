@@ -17,7 +17,7 @@
 
   <div style="width: 50%; float: left;">
     <textarea ng-model="myTextarea"
-      style="height: 50px; width: 200px; background-color: red; z-index: 10" 
+      style="height: 50px; width: 200px; background-color: white; z-index: 10" 
       cdkDrag 
       cdkDragBoundary=".container"
       (cdkDragEnded)="onDragEnded('reel1', $event)"> Reels 1</textarea>
@@ -35,7 +35,10 @@
       (cdkDragEnded)="onDragEnded('reel3', $event)"> Reels 3</textarea>
   </div>
   <div style="margin-left: 50%; height: 300px; background: blue;"> 
-    Video
+    <video autoplay muted loop id="myVideo">
+      <source src="path_to_video" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
   </div>
 
   <button (click) = "saveThePlan()"> save </button>
